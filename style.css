@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background:
+        #0f172a;
+
+    color: white;
+}
+
+
+.container {
+
+    max-width: 1200px;
+
+    width: 90%;
+
+    margin: auto;
+
+    padding: 30px 0;
+}
+
+
+header {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom: 20px;
+}
+
+
+h1 {
+
+    margin: 0;
+
+    font-size: 32px;
+}
+
+
+header p {
+
+    color: #94a3b8;
+}
+
+
+button {
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 14px 22px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    color: white;
+
+    background:
+        #334155;
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+
+#connectBtn {
+
+    background:
+        #2563eb;
+}
+
+
+.connection {
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+#dot {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+
+.online {
+
+    background: #22c55e;
+}
+
+
+.offline {
+
+    background: #ef4444;
+}
+
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.card {
+
+    background:
+        #1e293b;
+
+    border:
+        1px solid #334155;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    text-align: center;
+}
+
+
+.card h3 {
+
+    color:
+        #94a3b8;
+}
+
+
+.value {
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    margin: 15px 0;
+}
+
+
+.state {
+
+    font-size: 20px;
+}
+
+
+.panel {
+
+    margin-top: 20px;
+
+    padding: 25px;
+
+    background:
+        #1e293b;
+
+    border-radius: 12px;
+
+    border:
+        1px solid #334155;
+}
+
+
+.bar {
+
+    height: 25px;
+
+    background:
+        #334155;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+#gasBar {
+
+    height: 100%;
+
+    width: 0%;
+
+    background:
+        #22c55e;
+
+    transition:
+        width 0.3s;
+}
+
+
+.mode {
+
+    margin-right: 10px;
+}
+
+
+.mode.active {
+
+    background:
+        #2563eb;
+}
+
+
+.controls {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 80px);
+
+    justify-content:
+        center;
+
+    gap: 10px;
+}
+
+
+.controls button {
+
+    height: 65px;
+
+    font-size: 25px;
+}
+
+
+.controls button:first-child {
+
+    grid-column: 2;
+}
+
+
+.controls button:nth-child(2) {
+
+    grid-column: 1;
+}
+
+
+.controls .stop {
+
+    grid-column: 2;
+
+    background:
+        #dc2626;
+}
+
+
+.controls button:nth-child(4) {
+
+    grid-column: 3;
+}
+
+
+.controls button:nth-child(5) {
+
+    grid-column: 2;
+}
+
+
+.pumpOn {
+
+    background:
+        #dc2626;
+}
+
+
+#log {
+
+    height: 160px;
+
+    overflow-y: auto;
+
+    background:
+        #0f172a;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    font-family:
+        monospace;
+
+    color:
+        #94a3b8;
+}
+
+
+@media(max-width:800px) {
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media(max-width:500px) {
+
+    .cards {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    header {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap: 20px;
+    }
+
+}

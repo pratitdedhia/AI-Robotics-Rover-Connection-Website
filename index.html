@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ROVbot Command Center</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <div>
+
+            <h1>ROVbot Command Center</h1>
+
+            <p>
+                Autonomous Fire & Gas Detection Rover
+            </p>
+
+        </div>
+
+        <button id="connectBtn">
+            CONNECT BLUETOOTH
+        </button>
+
+    </header>
+
+
+    <div class="connection">
+
+        <span id="dot"
+              class="offline">
+        </span>
+
+        <span id="connectionText">
+            Disconnected
+        </span>
+
+    </div>
+
+
+    <section class="cards">
+
+        <div class="card">
+
+            <h3>MQ-6 GAS</h3>
+
+            <div id="gas"
+                 class="value">
+                ---
+            </div>
+
+            <small>Raw ADC</small>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>FLAME</h3>
+
+            <div id="flame"
+                 class="value">
+                ---
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>PUMP</h3>
+
+            <div id="pump"
+                 class="value">
+                ---
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>ROVER STATE</h3>
+
+            <div id="state"
+                 class="value state">
+                ---
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>Gas Level</h2>
+
+        <div class="bar">
+
+            <div id="gasBar"></div>
+
+        </div>
+
+        <p>
+            Detection threshold:
+            <span id="threshold">
+                550
+            </span>
+        </p>
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>Control Mode</h2>
+
+        <button
+            id="autoBtn"
+            class="mode active">
+
+            AUTO
+
+        </button>
+
+
+        <button
+            id="manualBtn"
+            class="mode">
+
+            MANUAL
+
+        </button>
+
+        <p id="modeText">
+
+            Automatic operation enabled.
+
+        </p>
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>Manual Rover Control</h2>
+
+        <div class="controls">
+
+            <button data-command="FORWARD">
+                ▲
+            </button>
+
+            <button data-command="LEFT">
+                ◀
+            </button>
+
+            <button
+                data-command="STOP"
+                class="stop">
+
+                ■
+
+            </button>
+
+            <button data-command="RIGHT">
+                ▶
+            </button>
+
+            <button data-command="BACKWARD">
+                ▼
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>Pump</h2>
+
+        <button
+            id="pumpOn"
+            class="pumpOn">
+
+            PUMP ON
+
+        </button>
+
+        <button
+            id="pumpOff"
+            class="pumpOff">
+
+            PUMP OFF
+
+        </button>
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>System Log</h2>
+
+        <div id="log"></div>
+
+    </section>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
